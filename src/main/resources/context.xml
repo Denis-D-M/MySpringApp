@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!--    <bean id="simpleDAO" class="com.epam.spring.dao.SimpleDAOImpl"></bean>-->
+
+    <!--    <bean id="simpleService" class="com.epam.spring.services.SimpleServiceImpl">-->
+    <!--        <constructor-arg name="dao" ref="simpleDAO"></constructor-arg>-->
+    <!--    </bean>-->
+    <!--    <bean id="engine" class="my.experiments.Engine">-->
+    <!--        <constructor-arg name="label" type="java.lang.String" value="M325?"></constructor-arg>-->
+    <!--        <constructor-arg name="power" type="int" value="350"></constructor-arg>-->
+    <!--    </bean>-->
+
+    <!--    <bean id="car" class="my.experiments.Car">-->
+    <!--        <constructor-arg name="engine" ref="engine"></constructor-arg>-->
+    <!--        <constructor-arg name="label" type="java.lang.String" value="BMW"></constructor-arg>-->
+    <!--    </bean>-->
+<!--    <context:property-placeholder location="musicPlayer.properties"></context:property-placeholder>-->
+
+
+<!--    <bean id="rapMusic" class="alishev.RapMusic"></bean>-->
+<!--    <bean id="classicalMusic"-->
+<!--          class="alishev.ClassicalMusic"-->
+<!--          init-method="doMyInit"-->
+<!--          destroy-method="destroyMethod"-->
+<!--          factory-method="getInstance"-->
+<!--          scope="prototype">-->
+<!--    </bean>-->
+
+<!--    <bean id="rockMusic" class="alishev.RockMusic"></bean>-->
+
+<!--    <bean id="musicPlayer" class="alishev.MusicPlayer" scope="prototype">-->
+
+<!--        <property name="musicList">-->
+<!--            <list>-->
+<!--                <ref bean="rapMusic"></ref>-->
+<!--                <ref bean="classicalMusic"></ref>-->
+<!--                <ref bean="rockMusic"></ref>-->
+<!--            </list>-->
+<!--        </property>-->
+<!--        <property name="name" value="${musicPlayer.name}"></property>-->
+<!--        <property name="volume" value="${musicPlayer.volume}"></property>-->
+<!--    </bean>-->
+    <context:component-scan base-package="alishev.annotations"></context:component-scan>
+    <context:property-placeholder location="musicPlayer.properties"></context:property-placeholder>
+
+</beans>
